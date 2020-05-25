@@ -1,0 +1,96 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my magic wand",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GetTemperature",
+                    "slots": [
+                        {
+                            "name": "scale",
+                            "type": "ST_scaletype"
+                        }
+                    ],
+                    "samples": [
+                        "what is the temperature in my room in {scale}",
+                        "how hot is it in my room in {scale}"
+                    ]
+                },
+                {
+                    "name": "SetLED",
+                    "slots": [
+                        {
+                            "name": "led",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "Set light to {led}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "ST_scaletype",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "K"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "F"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "C"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kelvin"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fahrenheit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Celsius"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
